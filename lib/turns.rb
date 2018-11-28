@@ -1,6 +1,9 @@
 class Turn
   def initialize(string, Card)
-    @question = Card
     @guess = string
+  end
+
+  def guess
+    @guess
   end
 end
