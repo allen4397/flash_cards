@@ -1,5 +1,7 @@
+require './lib/card.rb'
+
 class Turn
-  def initialize(string, Card)
+  def initialize(string, card)
     @guess = string
   end
 
