@@ -9,13 +9,13 @@ class Deck
     return @cards.count
   end
 
-  def cards_in_category(category)
-    specific_category = []
+  def cards_in_category(specific_category)
+      category_cards = []
     @cards.each do |card|
-      if card.category == category
-        specific_category << card
+      if card.category == specific_category
+        category_cards << card
       end
-    return specific_category
     end
+    return category_cards
   end
 end
