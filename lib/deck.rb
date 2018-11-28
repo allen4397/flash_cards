@@ -4,4 +4,8 @@ class Deck
   def initialize(cards)
     @cards = cards
   end
+
+  def count
+    return @cards.count
+  end
 end
