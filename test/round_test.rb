@@ -134,7 +134,6 @@ class RoundTest < Minitest::Test
     round.take_turn("Venus")
     round.take_turn("North north west")
 
-    assert_equal 100.0, round.percent_correct_by_category(:Geography)
     assert_equal 50.0, round.percent_correct_by_category(:STEM)
   end
 end
