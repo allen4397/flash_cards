@@ -61,4 +61,9 @@ class Round
     end
     return correct.to_f * 100 / total
   end
+
+  def start
+    puts "Welcome! You're playing with #{deck.cards.count} cards."
+    puts "-------------------------------------------------"
+  end
 end
