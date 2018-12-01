@@ -1,4 +1,5 @@
 require 'csv'
+require './lib/card'
 
 class CardGenerator
   attr_reader :file
@@ -6,4 +7,6 @@ class CardGenerator
   def initialize(file)
     @file = file
   end
+
+
 end
