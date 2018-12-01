@@ -6,7 +6,7 @@ require 'csv'
 
 class CardGeneratorTest < Minitest::Test
   def test_it_exists
-    card_generator = CardGenerator.new
+    card_generator = CardGenerator.new("")
 
     assert_instance_of CardGenerator, card_generator
   end
@@ -14,6 +14,6 @@ class CardGeneratorTest < Minitest::Test
   def test_it_contains_a_file
     card_generator = CardGenerator.new("cards.txt")
 
-    assert_equals cards.txt, card_generator.file
+    assert_equal "cards.txt", card_generator.file
   end
 end
