@@ -22,4 +22,11 @@ class CardGeneratorTest < Minitest::Test
 
     assert_instance_of Card, card_generator.cards[0]
   end
+
+  def test_the_cards_contain_the_right_data
+    card_generator = CardGenerator.new("cards.txt")
+    card = card_generator.cards[0]
+
+    assert_equal "10", card.answer
+  end
 end
