@@ -2,7 +2,6 @@ require 'minitest'
 require 'minitest/autorun'
 require 'minitest/pride'
 require './lib/card_generator'
-require 'csv'
 
 class CardGeneratorTest < Minitest::Test
   def test_it_exists
@@ -15,5 +14,11 @@ class CardGeneratorTest < Minitest::Test
     card_generator = CardGenerator.new("cards.txt")
 
     assert_equal "cards.txt", card_generator.file
+  end
+
+  def test_it_can_create_cards
+    card_generator = CardGenerator.new("cards.txt")
+
+    assert_instance_of Card, card_generator.cards[0]
   end
 end
