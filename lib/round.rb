@@ -5,16 +5,21 @@ class Round
 
   attr_accessor :turns,
                 :current_card,
-                :number_correct
+                :number_correct,
+                :categories
 
   def initialize(deck, turns=[])
     @deck = deck
     @turns = turns
     @current_card = deck.cards.first
     @number_correct = 0
+    @categories = []
   end
 
   def take_turn(guess)
+    if @categories.include?(@current_card.category) == false
+      @categories << @current_card.category
+    end
     new_turn = Turn.new(guess, @current_card)
     @turns << new_turn
     @current_card = deck.cards.rotate!.first
