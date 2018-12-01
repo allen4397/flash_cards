@@ -12,3 +12,5 @@ cards = [card_1, card_2, card_3, card_4]
 deck = Deck.new(cards)
 
 round = Round.new(deck)
+
+round.start
