@@ -40,17 +40,7 @@ class Round
   end
 
   def percent_correct
-    correct = 0
-    total = 0
-    turns.each do |turn|
-      if turn.correct?
-        correct += 1
-        total += 1
-      else
-        total += 1
-      end
-    end
-    correct.to_f * 100 / total
+    number_correct.to_f * 100 / turns.count
   end
 
   def percent_correct_by_category(category)
